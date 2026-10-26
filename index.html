@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarship Finder | Bridge Lacrosse</title>
+<meta name="description" content="Free scholarship listings for Bridge Lacrosse student-athletes and families in Dallas. Becas gratuitas para familias de Bridge Lacrosse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Bridge brand */
+    --navy:#110e3d;
+    --orange:#ff6600;
+    --orange-ink:#b84a00;      /* orange for small text, 5.2:1 on white */
+    /* Squarespace site palette (bridgelacrosse.org) */
+    --ink:#1c1c1c;             /* headings */
+    --text:#363636;            /* body */
+    --mute:#666666;
+    --charcoal:#272727;        /* primary buttons */
+    --paper:#ffffff;
+    --mist:#f5f5f5;            /* alternate sections, footer */
+    --line:#e2e2e2;
+    --line-strong:#c9c9c9;
+
+    --display:'Bebas Neue','Arial Narrow',sans-serif;
+    --body:'Montserrat',system-ui,-apple-system,sans-serif;
+    --track:.18em;             /* uppercase letter spacing, as on the main site */
+    --wrap:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:var(--body);font-size:15px;line-height:1.6;color:var(--text);background:var(--paper);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  button,input,select{font:inherit;color:inherit}
+  :focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .label{font-size:11px;font-weight:600;letter-spacing:var(--track);text-transform:uppercase;color:var(--mute)}
+
+  /* ---------- Header ---------- */
+  .site-head{border-bottom:1px solid var(--line);background:var(--paper)}
+  .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px}
+  .brand img{height:52px;width:auto;display:block}
+  .head-links{display:flex;align-items:center;gap:28px}
+  .head-links a{font-size:12px;font-weight:500;letter-spacing:var(--track);text-transform:uppercase;text-decoration:none;color:var(--ink)}
+  .head-links a:hover{color:var(--orange-ink)}
+  .lang{display:flex;border:1px solid var(--charcoal)}
+  .lang button{border:0;background:transparent;cursor:pointer;font-size:11px;font-weight:600;letter-spacing:.14em;padding:7px 11px;color:var(--charcoal)}
+  .lang button[aria-pressed="true"]{background:var(--charcoal);color:#fff}
+  body.embedded .site-head{display:none}
+  body.embedded .lang-float{display:flex}
+  .lang-float{display:none;justify-content:flex-end;padding-top:16px}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:72px 0 56px;text-align:center}
+  .hero .label{color:var(--orange-ink)}
+  .hero h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(48px,8vw,88px);line-height:.95;letter-spacing:.06em;color:var(--navy);margin:14px 0 18px}
+  .hero p{max-width:620px;margin:0 auto;font-size:16px}
+  .hero-stats{display:flex;justify-content:center;gap:0;margin-top:34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat{flex:1;max-width:220px;padding:18px 12px}
+  .stat + .stat{border-left:1px solid var(--line)}
+  .stat b{display:block;font-family:var(--display);font-weight:400;font-size:34px;line-height:1;color:var(--navy);letter-spacing:.03em}
+  .stat span{display:block;line-height:1.4;margin-top:6px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+  /* ---------- Section heads ---------- */
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px}
+  h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:34px;letter-spacing:.06em;color:var(--navy);line-height:1}
+  .s-go{color:var(--mute)}
+
+  /* ---------- Filters ---------- */
+  .board{padding:16px 0 72px}
+  .filters{border:1px solid var(--line);padding:22px 22px 6px;margin-bottom:28px}
+  .search{position:relative;margin-bottom:20px}
+  .search input{width:100%;font-size:15px;padding:14px 16px 14px 46px;border:1px solid var(--line-strong);border-radius:0;background:var(--paper);-webkit-appearance:none}
+  .search input:focus{outline:2px solid var(--orange);outline-offset:-1px}
+  .search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--mute)}
+  .f-row{display:grid;grid-template-columns:auto auto 1fr 1fr;gap:20px 28px;align-items:end;margin-bottom:18px}
+  .f-row2{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:20px 28px;align-items:end;margin-bottom:18px}
+  .f-group{display:flex;flex-direction:column;gap:8px;min-width:0}
+  .seg{display:flex;border:1px solid var(--charcoal);width:max-content;max-width:100%}
+  .seg button{border:0;background:transparent;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:10px 14px;white-space:nowrap;color:var(--charcoal)}
+  .seg button + button{border-left:1px solid var(--charcoal)}
+  .seg button[aria-pressed="true"]{background:var(--charcoal);color:#fff}
+  .seg button:hover:not([aria-pressed="true"]){background:var(--mist)}
+  .select{width:100%;font-size:14px;font-weight:500;padding:10px 36px 10px 12px;border:1px solid var(--line-strong);border-radius:0;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23272727' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center;-webkit-appearance:none;appearance:none;cursor:pointer}
+  .check{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:500;cursor:pointer;padding:10px 0}
+  .check input{accent-color:var(--charcoal);width:17px;height:17px;flex:0 0 auto;cursor:pointer}
+  .focus-wrap{border-top:1px solid var(--line);padding-top:16px;margin-bottom:16px}
+  .focus-toggle{display:none}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .chip{cursor:pointer;font-size:12.5px;font-weight:500;padding:7px 12px;border:1px solid var(--line-strong);background:var(--paper);color:var(--text)}
+  .chip:hover{border-color:var(--charcoal)}
+  .chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+
+  .meta-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+  .count{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+  .count b{color:var(--navy)}
+  .reset{border:0;background:none;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-ink);text-decoration:underline;text-underline-offset:3px}
+
+  /* ---------- Cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .card{border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;padding:24px 22px 22px}
+  .card:hover{border-color:var(--line-strong)}
+  .c-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+  .amt{font-family:var(--display);font-size:36px;line-height:.9;color:var(--navy);letter-spacing:.02em}
+  .amt.na{font-size:22px;color:var(--mute);padding-top:6px}
+  .amt small{display:block;font-family:var(--body);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+  .due{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;border:1px solid var(--line-strong);color:var(--text);white-space:nowrap}
+  .due.soon{border-color:var(--orange);background:var(--orange);color:var(--navy)}
+  .due.open{color:var(--mute)}
+  .c-name{font-size:16.5px;font-weight:700;line-height:1.3;color:var(--ink)}
+  .c-name a{text-decoration:none}
+  .c-name a:hover{text-decoration:underline}
+  .c-sponsor{font-size:13px;color:var(--mute);margin-top:3px}
+  .c-sum{font-size:13.5px;line-height:1.55;margin-top:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .c-sum .en-note{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+  .c-facts{list-style:none;margin:16px 0 14px;border-top:1px solid var(--line)}
+  .c-facts li{display:flex;justify-content:space-between;gap:12px;font-size:13px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .c-facts li span{color:var(--mute)}
+  .c-facts li b{font-weight:600;color:var(--ink);text-align:right}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;padding:3px 8px;background:var(--mist);color:var(--text)}
+  .tag.lax{background:var(--orange);color:var(--navy)}
+  .tag.local{background:var(--navy);color:#fff}
+  .tag.hs{box-shadow:inset 0 0 0 1px var(--navy);background:var(--paper);color:var(--navy)}
+  .tag.limit{background:var(--paper);color:var(--orange-ink);border:1px dashed var(--orange-ink);padding:2px 7px}
+  .c-actions{margin-top:auto}
+  .btn{display:block;text-align:center;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:14px 18px;background:var(--charcoal);color:#fff;border:2px solid var(--charcoal)}
+  .btn:hover{background:var(--navy);border-color:var(--navy)}
+  .btn-outline{background:transparent;color:var(--charcoal)}
+  .btn-outline:hover{background:var(--charcoal);color:#fff}
+  .c-note{font-size:11.5px;color:var(--mute);text-align:center;margin-top:9px}
+
+  .empty{grid-column:1/-1;text-align:center;padding:64px 20px;border:1px solid var(--line)}
+  .empty h3{font-family:var(--display);font-weight:400;font-size:30px;letter-spacing:.06em;color:var(--navy);margin-bottom:6px}
+  .empty .btn{display:inline-block;margin-top:18px}
+  .more-btn{display:flex;justify-content:center;margin-top:28px}
+  .status{font-size:13px;color:var(--mute);text-align:center;padding:40px 0}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--mist);padding:44px 0;font-size:13.5px}
+  .f-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+  .f-note{max-width:52ch;color:var(--text)}
+  .f-links{list-style:none;margin-top:10px}
+  .f-links li{padding:6px 0;border-bottom:1px solid var(--line)}
+  .f-links a{text-decoration:none;font-weight:600;color:var(--ink)}
+  .f-links a:hover{color:var(--orange-ink)}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:1020px){
+    .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .f-row{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:680px){
+    .wrap{padding:0 16px}
+    .site-head .wrap{min-height:68px}
+    .brand img{height:40px}
+    .head-links{gap:14px}
+    .head-links .home{display:none}
+    .hero{padding:48px 0 40px}
+    .stat b{font-size:28px}
+    .grid{grid-template-columns:1fr}
+    .f-row,.f-row2{grid-template-columns:1fr}
+    .seg{width:100%}
+    .seg button{flex:1;padding:10px 6px;font-size:11px;letter-spacing:.04em}
+    .filters{padding:16px 16px 4px}
+    .focus-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;border:0;background:none;cursor:pointer;padding:2px 0}
+    .focus-toggle .label{color:var(--ink)}
+    .focus-wrap:not(.open) .chips{display:none}
+    .focus-wrap .label.desk{display:none}
+    .f-grid{grid-template-columns:1fr;gap:28px}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="https://bridgelacrosse.org" aria-label="Bridge Lacrosse home"><img src="bridge-logo.webp" alt="Bridge Lacrosse"></a>
+    <nav class="head-links">
+      <a class="home" href="https://bridgelacrosse.org" data-i18n="navHome">Bridge Lacrosse</a>
+      <div class="lang" role="group" aria-label="Language / Idioma">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap lang-float">
+  <div class="lang" role="group" aria-label="Language / Idioma">
+    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-lang="es" aria-pressed="false">ES</button>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="label" data-i18n="eyebrow">Bridge Lacrosse Dallas</div>
+    <h1 data-i18n="title">Scholarship Finder</h1>
+    <p data-i18n="lede">Free money for college, in one place. Pick what fits your student-athlete, then apply straight from the official source.</p>
+    <div class="hero-stats">
+      <div class="stat"><b id="statTotal">0</b><span data-i18n="statTotal">Scholarships</span></div>
+      <div class="stat"><b id="statUpdated">&nbsp;</b><span data-i18n="statUpdated">Last updated</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="board">
+  <div class="wrap">
+    <div class="sec-head"><h2 data-i18n="allTitle">All Scholarships</h2></div>
+
+    <form class="filters" id="filters" onsubmit="return false" role="search">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <label class="sr" for="q" data-i18n="searchLabel">Search scholarships</label>
+        <input type="search" id="q" autocomplete="off" data-i18n-ph="searchPh" placeholder="Search by name, sponsor or keyword">
+      </div>
+
+      <div class="f-row">
+        <div class="f-group">
+          <span class="label" id="lvlLbl" data-i18n="level">Level</span>
+          <div class="seg" role="group" aria-labelledby="lvlLbl" data-filter="level">
+            <button type="button" data-v="all" aria-pressed="true" data-i18n="lvlAll">All</button>
+            <button type="button" data-v="Undergraduate" aria-pressed="false" data-i18n="lvlUG">Undergraduate</button>
+            <button type="button" data-v="Graduate" aria-pressed="false" data-i18n="lvlGR">Graduate</button>
+          </div>
+        </div>
+        <div class="f-group">
+          <label class="label" for="amount" data-i18n="minAward">Minimum award</label>
+          <select class="select" id="amount">
+            <option value="0" data-i18n="amtAny">Any amount</option>
+            <option value="1000">$1,000+</option>
+            <option value="5000">$5,000+</option>
+            <option value="10000">$10,000+</option>
+          </select>
+        </div>
+        <div class="f-group">
+          <label class="label" for="sort" data-i18n="sortBy">Sort by</label>
+          <select class="select" id="sort">
+            <option value="deadline" data-i18n="sortDeadline">Soonest deadline</option>
+            <option value="amount" data-i18n="sortAmount">Highest award</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="f-row2">
+        <div class="f-group">
+          <label class="label" for="school" data-i18n="school">School or college</label>
+          <select class="select" id="school">
+            <option value="all" data-i18n="schoolAll">All schools and colleges</option>
+            <option value="any" data-i18n="schoolAny">Open to any school</option>
+          </select>
+        </div>
+        <label class="check"><input type="checkbox" id="hideLimited"> <span data-i18n="hideLimited">Hide awards that need a club membership or family tie</span></label>
+      </div>
+
+      <div class="focus-wrap" id="focusWrap">
+        <button type="button" class="focus-toggle" id="focusToggle" aria-expanded="false" aria-controls="chips">
+          <span class="label" data-i18n="focus">Who it's for</span><span aria-hidden="true">+</span>
+        </button>
+        <span class="label desk" data-i18n="focus">Who it's for</span>
+        <div class="chips" id="chips"></div>
+      </div>
+    </form>
+
+    <div class="meta-row">
+      <div class="count" id="count" aria-live="polite"></div>
+      <button class="reset" id="reset" type="button" data-i18n="reset">Reset filters</button>
+    </div>
+
+    <div class="grid" id="grid"><p class="status" id="status" data-i18n="loading">Loading scholarships</p></div>
+    <div class="more-btn" id="moreWrap" hidden><button type="button" class="btn btn-outline" id="more" data-i18n="showMore">Show more</button></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <p class="f-note" data-i18n="footNote">Always confirm amounts, deadlines and eligibility on the official scholarship site before you apply. Bridge Lacrosse gathers these listings to help families find them. The sponsor's own page is the source of truth.</p>
+      <div>
+        <span class="label" data-i18n="moreSites">Looking for more?</span>
+        <ul class="f-links">
+          <li><a href="https://bold.org" target="_blank" rel="noopener">Bold.org</a></li>
+          <li><a href="https://www.fastweb.com" target="_blank" rel="noopener">Fastweb</a></li>
+          <li><a href="https://www.scholarships.com" target="_blank" rel="noopener">Scholarships.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------------- Copy (English / Spanish) ---------------- */
+const T = {
+  en:{
+    navHome:"Bridge Lacrosse", eyebrow:"Bridge Lacrosse Dallas", title:"Scholarship Finder",
+    lede:"Free money for college, in one place. Pick what fits your student-athlete, then apply straight from the official source.",
+    statTotal:"Scholarships", statUpdated:"Last updated",
+    allTitle:"All Scholarships",
+    searchLabel:"Search scholarships", searchPh:"Search by name, sponsor or keyword",
+    level:"Level", lvlAll:"All", lvlUG:"Undergraduate", lvlGR:"Graduate",
+    minAward:"Minimum award", amtAny:"Any amount", sortBy:"Sort by", sortDeadline:"Soonest deadline", sortAmount:"Highest award",
+    school:"School or college", schoolAll:"All schools and colleges", schoolAny:"Open to any school",
+    hideLimited:"Hide awards that need a club membership or family tie",
+    focus:"Who it's for", reset:"Reset filters", loading:"Loading scholarships", showMore:"Show more",
+    footNote:"Always confirm amounts, deadlines and eligibility on the official scholarship site before you apply. Bridge Lacrosse gathers these listings to help families find them. The sponsor's own page is the source of truth.",
+    moreSites:"Looking for more?",
+    count:n=>`<b>${n}</b> ${n===1?"scholarship":"scholarships"}`,
+    upTo:"up to", varies:"Amount varies", fullRide:"Full ride",
+    daysLeft:n=>n===0?"Due today":n===1?"1 day left":`${n} days left`, due:"Due", rolling:"Check site",
+    deadline:"Deadline", winners:"Winners", where:"Where", level_:"Level",
+    multiple:"Multiple", nWinners:n=>n.toLocaleString("en-US"),
+    region:{national:"Nationwide",texas:"Texas",dallas:"Dallas area"},
+    levels:{"Undergraduate":"Undergraduate","Graduate":"Graduate"},
+    onlyFor:s=>`Only for ${s} students`, or:"or",
+    limits:{"Members only":"Members only","Family connection":"Family tie required"},
+    apply:"Apply", confirm:"Confirm details on the official site",
+    emptyT:"Nothing matches yet", emptyP:"Try removing a filter or widening your search.",
+    error:"We could not load scholarships right now. Please try again shortly.",
+    pdf:"PDF flyer", enOnly:"", hs:"Grades 9-12"
+  },
+  es:{
+    navHome:"Bridge Lacrosse", eyebrow:"Bridge Lacrosse Dallas", title:"Buscador de Becas",
+    lede:"Dinero gratis para la universidad, todo en un solo lugar. Elige lo que mejor le queda a tu estudiante-atleta y luego aplica directo en el sitio oficial.",
+    statTotal:"Becas", statUpdated:"Actualizado",
+    allTitle:"Todas las Becas",
+    searchLabel:"Buscar becas", searchPh:"Busca por nombre, patrocinador o palabra clave",
+    level:"Nivel", lvlAll:"Todos", lvlUG:"Licenciatura", lvlGR:"Posgrado",
+    minAward:"Monto mínimo", amtAny:"Cualquier monto", sortBy:"Ordenar por", sortDeadline:"Fecha más próxima", sortAmount:"Monto más alto",
+    school:"Escuela o universidad", schoolAll:"Todas las escuelas", schoolAny:"Abierta a cualquier escuela",
+    hideLimited:"Ocultar becas que piden ser miembro de un club o tener un vínculo familiar",
+    focus:"Para quién es", reset:"Borrar filtros", loading:"Cargando becas", showMore:"Ver más",
+    footNote:"Antes de aplicar, confirma siempre el monto, la fecha límite y los requisitos en el sitio oficial de la beca. Bridge Lacrosse reúne estas becas para ayudar a las familias a encontrarlas. La página del patrocinador es la fuente oficial.",
+    moreSites:"¿Buscas más?",
+    count:n=>`<b>${n}</b> ${n===1?"beca":"becas"}`,
+    upTo:"hasta", varies:"Monto variable", fullRide:"Beca completa",
+    daysLeft:n=>n===0?"Cierra hoy":n===1?"Queda 1 día":`Quedan ${n} días`, due:"Cierra", rolling:"Ver sitio",
+    deadline:"Fecha límite", winners:"Ganadores", where:"Dónde", level_:"Nivel",
+    multiple:"Varios", nWinners:n=>n.toLocaleString("es-MX"),
+    region:{national:"Todo el país",texas:"Texas",dallas:"Área de Dallas"},
+    levels:{"Undergraduate":"Licenciatura","Graduate":"Posgrado"},
+    onlyFor:s=>`Solo para estudiantes de ${s}`, or:"o",
+    limits:{"Members only":"Solo para miembros","Family connection":"Requiere vínculo familiar"},
+    apply:"Aplicar", confirm:"Confirma los detalles en el sitio oficial",
+    emptyT:"Aún no hay resultados", emptyP:"Quita un filtro o amplía tu búsqueda.",
+    error:"No pudimos cargar las becas en este momento. Inténtalo de nuevo en un rato.",
+    pdf:"Folleto PDF", enOnly:"En inglés", hs:"Grados 9 a 12"
+  }
+};
+
+const FOCUS = ["Open to all","Need-based","First-gen","DACA/Undocumented","Merit","Lacrosse","Athletes","Community college","STEM","Trades/CTE","Veterans/Military","Women","Disability","Black","Latino/Hispanic","Asian/Pacific Islander","Native American","Students of color","LGBTQ+","HBCU"];
+const TAG_ES = {"Open to all":"Abierta a todos","Need-based":"Necesidad económica","First-gen":"Primera generación","Merit":"Mérito","Dallas/Texas":"Texas","Lacrosse":"Lacrosse","STEM":"STEM","Trades/CTE":"Oficios técnicos","Veterans/Military":"Veteranos y militares","Women":"Mujeres","Disability":"Discapacidad","Black":"Afroamericanos","Latino/Hispanic":"Latinos","Asian/Pacific Islander":"Asiáticos e isleños del Pacífico","Native American":"Nativos americanos","Students of color":"Estudiantes de color","LGBTQ+":"LGBTQ+","HBCU":"HBCU","Leadership":"Liderazgo","DACA/Undocumented":"DACA / indocumentados","Community college":"Colegio comunitario","Athletes":"Atletas"};
+const TAG_EN = {"Dallas/Texas":"Texas"};
+const LIMITS = ["Members only","Family connection"];   // from audience.py: needs a membership or family tie
+const PAGE = 24;
+
+/* ---------------- State ---------------- */
+let DATA = [];
+let lang = pickLang();
+const state = {level:"all", q:"", amount:0, sort:"deadline", school:"all", hideLimited:false, focus:new Set(), shown:PAGE};
+const TODAY = new Date(); TODAY.setHours(0,0,0,0);
+const $ = id => document.getElementById(id);
+
+function pickLang(){
+  const p = new URLSearchParams(location.search).get("lang");
+  if (p === "es" || p === "en") return p;
+  try { const s = localStorage.getItem("bridge-lang"); if (s === "es" || s === "en") return s; } catch(e){}
+  return "en";
+}
+const t = k => T[lang][k];
+
+/* ---------------- Helpers ---------------- */
+function esc(s){ return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function safeUrl(u){ return /^https?:\/\//i.test(u || "") ? u : "#"; }
+function parseDate(d){ if(!d) return null; const x = new Date(String(d).slice(0,10)+"T00:00:00"); return isNaN(x) ? null : x; }
+function daysLeft(d){ const x = parseDate(d); return x ? Math.round((x - TODAY)/86400000) : null; }
+function fmtDate(d, withYear){
+  const x = parseDate(d); if(!x) return "";
+  const loc = lang === "es" ? "es-MX" : "en-US";
+  const o = {month:"short", day:"numeric"};
+  if (withYear || x.getFullYear() !== TODAY.getFullYear()) o.year = "numeric";
+  return x.toLocaleDateString(loc, o).replace(/\./g, "");
+}
+function money(a){ return "$" + Number(a).toLocaleString("en-US"); }
+function tagLabel(tg){ return lang === "es" ? (TAG_ES[tg] || tg) : (TAG_EN[tg] || tg); }
+function orList(a){ const o = " " + t("or") + " "; return a.length < 3 ? a.join(o) : a.slice(0,-1).join(", ") + o + a[a.length-1]; }
+
+/* Limits from audience.py: schools the award is tied to, and membership or family-tie needs */
+function limitsOf(s){
+  const out = (s.schools || []).length ? [t("onlyFor")(orList(s.schools))] : [];
+  return out.concat((s.who || []).filter(w => LIMITS.includes(w)).map(w => t("limits")[w]));
+}
+/* Source tags plus audience.py's groups. A limited award is not "Open to all". */
+function tagsOf(s){
+  if (s._tags) return s._tags;
+  const all = [...new Set([...(s.tags || []), ...(s.who || [])])].filter(x => !LIMITS.includes(x));
+  const limited = (s.schools || []).length || (s.who || []).some(w => LIMITS.includes(w));
+  return (s._tags = limited ? all.filter(x => x !== "Open to all") : all);
+}
+
+/* Where a scholarship is open. Dallas only for now: audience.py keeps awards
+   limited to other areas off the board. Uses its "area" field when present,
+   then falls back to reading the eligibility text. */
+const DALLAS_RE = /dallas county|dallas isd|dallas college|metropolitan dallas|\bdfw\b|north texas|tarrant|collin county|denton county|\bdallas\b(?!,?\s*(oregon|or)\b)/i;
+const TEXAS_RE  = /\btexas\b|\btx\b|\baustin\b/i;   // e.g. awards tied to UT Austin
+function regionOf(s){
+  if (s._region) return s._region;
+  let r = "national";
+  const area = (s.area || []).map(x => String(x).toLowerCase());
+  if (area.length){
+    if (area.includes("dallas area")) r = "dallas";
+  } else {
+    const txt = [s.residency, s.eligibility, s.name, s.sponsor].filter(Boolean).join(" ");
+    if (DALLAS_RE.test(txt)) r = "dallas";
+    else if (TEXAS_RE.test(txt) || (s.tags || []).includes("Dallas/Texas")) r = "texas";
+  }
+  return (s._region = r);
+}
+
+/* ---------------- Filtering ---------------- */
+function matches(s){
+  if (state.level !== "all" && !(s.levels || []).includes(state.level)) return false;
+  if (state.amount && !(s.amount >= state.amount)) return false;
+  const schools = s.schools || [];
+  if (state.school === "any" && schools.length) return false;                 // hide awards tied to one school
+  if (!["all","any"].includes(state.school) && schools.length && !schools.includes(state.school)) return false;
+  if (state.hideLimited && (s.who || []).some(w => LIMITS.includes(w))) return false;
+  if (state.q){
+    const hay = [s.name, s.sponsor, s.eligibility, s.summary_en, s.summary_es, ...schools, ...tagsOf(s).map(x => x + " " + (TAG_ES[x] || ""))].join(" ").toLowerCase();
+    if (!state.q.split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  for (const f of state.focus) if (!tagsOf(s).includes(f)) return false;
+  return true;
+}
+/* Awards students in grades 9-12 can apply for come first (audience.py's high_school) */
+function sorted(list){
+  const far = 8.64e15;
+  return list.slice().sort((a,b) => {
+    if (!!a.high_school !== !!b.high_school) return a.high_school ? -1 : 1;
+    if (state.sort === "amount") return (b.amount ?? -1) - (a.amount ?? -1);
+    const da = parseDate(a.deadline), db = parseDate(b.deadline);
+    return (da ? +da : far) - (db ? +db : far);
+  });
+}
+
+/* ---------------- Rendering ---------------- */
+function amountHtml(s){
+  if (s.amount == null) return `<div class="amt na">${esc(t("varies"))}</div>`;
+  if (s.amount >= 40000 && /full|complet/i.test((s.eligibility||"") + s.name)) return `<div class="amt">${esc(t("fullRide"))}</div>`;
+  return `<div class="amt"><small>${esc(t("upTo"))}</small>${money(s.amount)}</div>`;
+}
+function dueHtml(s){
+  const dl = daysLeft(s.deadline);
+  if (dl == null) return `<span class="due open">${esc(t("rolling"))}</span>`;
+  if (dl <= 30) return `<span class="due soon">${esc(t("daysLeft")(Math.max(dl,0)))}</span>`;
+  return `<span class="due">${esc(t("due"))} ${esc(fmtDate(s.deadline))}</span>`;
+}
+function summaryHtml(s){
+  if (lang === "es" && s.summary_es) return esc(s.summary_es);
+  const en = s.summary_en || s.eligibility;
+  if (!en) return "";
+  return lang === "es" ? `<span class="en-note">${esc(t("enOnly"))}:</span> ${esc(en)}` : esc(en);
+}
+function card(s){
+  const url = esc(safeUrl(s.apply_url || s.source_url));
+  const reg = regionOf(s);
+  const where = s.residency && lang === "en" ? s.residency : t("region")[reg];
+  const lvls = (s.levels || []).map(l => t("levels")[l] || l).join(", ");
+  const tags = tagsOf(s).filter(x => x !== "Dallas/Texas").map(x => `<span class="tag${x === "Lacrosse" ? " lax" : ""}">${esc(tagLabel(x))}</span>`).join("");
+  const local = reg === "dallas" ? `<span class="tag local">${esc(t("region")[reg])}</span>` : "";
+  const hs = s.high_school ? `<span class="tag hs">${esc(t("hs"))}</span>` : "";
+  const limits = limitsOf(s).map(x => `<span class="tag limit">${esc(x)}</span>`).join("");
+  const pdf = s.source_type === "PDF" ? `<span class="tag">${esc(t("pdf"))}</span>` : "";
+  const sum = summaryHtml(s);
+  return `<article class="card">
+    <div class="c-top">${amountHtml(s)}${dueHtml(s)}</div>
+    <h3 class="c-name"><a href="${url}" target="_blank" rel="noopener">${esc(s.name)}</a></h3>
+    <div class="c-sponsor">${esc(s.sponsor)}</div>
+    ${sum ? `<p class="c-sum">${sum}</p>` : ""}
+    <ul class="c-facts">
+      <li><span>${esc(t("deadline"))}</span><b>${s.deadline ? esc(fmtDate(s.deadline, true)) : esc(t("rolling"))}</b></li>
+      <li><span>${esc(t("where"))}</span><b>${esc(where)}</b></li>
+      ${lvls ? `<li><span>${esc(t("level_"))}</span><b>${esc(lvls)}</b></li>` : ""}
+      <li><span>${esc(t("winners"))}</span><b>${s.awards ? esc(t("nWinners")(s.awards)) : esc(t("multiple"))}</b></li>
+    </ul>
+    ${(hs || local || tags || limits || pdf) ? `<div class="tags">${hs}${local}${tags}${limits}${pdf}</div>` : ""}
+    <div class="c-actions">
+      <a class="btn" href="${url}" target="_blank" rel="noopener">${esc(t("apply"))}<span class="sr"> ${esc(s.name)}</span></a>
+      <div class="c-note">${esc(t("confirm"))}</div>
+    </div>
+  </article>`;
+}
+
+function render(){
+  const list = sorted(DATA.filter(matches));
+  $("count").innerHTML = t("count")(list.length);
+  const grid = $("grid");
+  if (!list.length){
+    grid.innerHTML = `<div class="empty"><h3>${esc(t("emptyT"))}</h3><p>${esc(t("emptyP"))}</p><button type="button" class="btn btn-outline" data-reset>${esc(t("reset"))}</button></div>`;
+    $("moreWrap").hidden = true;
+    return;
+  }
+  grid.innerHTML = list.slice(0, state.shown).map(card).join("");
+  $("moreWrap").hidden = list.length <= state.shown;
+}
+
+function renderChips(){
+  $("chips").innerHTML = FOCUS.filter(f => f === "Lacrosse" || DATA.some(s => tagsOf(s).includes(f)))
+    .map(f => `<button type="button" class="chip" data-f="${esc(f)}" aria-pressed="${state.focus.has(f)}">${esc(tagLabel(f))}</button>`).join("");
+}
+
+/* School menu: only local schools (audience.py's school_area) with an award on the board */
+function renderSchools(){
+  const sel = $("school"), byArea = {};
+  DATA.forEach(s => Object.entries(s.school_area || {}).forEach(([n, a]) => (byArea[a] = byArea[a] || new Set()).add(n)));
+  sel.querySelectorAll("optgroup").forEach(g => g.remove());
+  [["Dallas area","dallas"]].filter(([a]) => byArea[a]).forEach(([a, key]) => {
+    const g = document.createElement("optgroup"); g.label = t("region")[key];
+    [...byArea[a]].sort().forEach(n => { const o = document.createElement("option"); o.value = n; o.textContent = n; g.appendChild(o); });
+    sel.appendChild(g);
+  });
+  sel.value = state.school;
+  if (sel.value !== state.school){ state.school = "all"; sel.value = "all"; }
+}
+
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => { const v = t(el.dataset.i18n); if (typeof v === "string") el.textContent = v; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => el.placeholder = t(el.dataset.i18nPh));
+  document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  document.title = (lang === "es" ? "Buscador de Becas" : "Scholarship Finder") + " | Bridge Lacrosse";
+}
+
+function rerenderAll(){ applyLang(); renderSchools(); renderChips(); render(); setUpdated(); }
+
+/* ---------------- Events ---------------- */
+document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => {
+  lang = b.dataset.lang;
+  try { localStorage.setItem("bridge-lang", lang); } catch(e){}
+  rerenderAll();
+}));
+document.querySelectorAll(".seg[data-filter]").forEach(seg => seg.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  seg.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  state[seg.dataset.filter] = b.dataset.v; state.shown = PAGE;
+  render();
+}));
+$("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  const f = b.dataset.f;
+  state.focus.has(f) ? state.focus.delete(f) : state.focus.add(f);
+  b.setAttribute("aria-pressed", String(state.focus.has(f)));
+  state.shown = PAGE; render();
+});
+let qTimer;
+$("q").addEventListener("input", e => { clearTimeout(qTimer); qTimer = setTimeout(() => { state.q = e.target.value.trim().toLowerCase(); state.shown = PAGE; render(); }, 120); });
+$("amount").addEventListener("change", e => { state.amount = +e.target.value; state.shown = PAGE; render(); });
+$("sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
+$("school").addEventListener("change", e => { state.school = e.target.value; state.shown = PAGE; render(); });
+$("hideLimited").addEventListener("change", e => { state.hideLimited = e.target.checked; state.shown = PAGE; render(); });
+$("more").addEventListener("click", () => { state.shown += PAGE; render(); });
+$("focusToggle").addEventListener("click", e => {
+  const w = $("focusWrap"); const open = !w.classList.contains("open");
+  w.classList.toggle("open", open); e.currentTarget.setAttribute("aria-expanded", String(open));
+  e.currentTarget.lastElementChild.textContent = open ? "−" : "+";
+});
+function reset(){
+  Object.assign(state, {level:"all", q:"", amount:0, sort:"deadline", school:"all", hideLimited:false, shown:PAGE}); state.focus.clear();
+  $("q").value = ""; $("amount").value = "0"; $("sort").value = "deadline"; $("school").value = "all"; $("hideLimited").checked = false;
+  document.querySelectorAll(".seg").forEach(seg => seg.querySelectorAll("button").forEach((x,i) => x.setAttribute("aria-pressed", String(i === 0))));
+  renderChips(); render();
+}
+$("reset").addEventListener("click", reset);
+$("grid").addEventListener("click", e => { if (e.target.closest("[data-reset]")) reset(); });
+
+/* ---------------- Load ---------------- */
+let generatedAt = null;
+function setUpdated(){ $("statUpdated").textContent = generatedAt ? fmtDate(generatedAt.slice(0,10)) : "–"; }
+if (window.parent !== window) document.body.classList.add("embedded");
+applyLang();
+
+fetch("scholarships.json", {cache:"no-store"})
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(d => {
+    DATA = (d.scholarships || []).filter(s => s && s.name && s.looks_legit !== false && s.local !== false)
+      .filter(s => { const dl = daysLeft(s.deadline); return dl == null || dl >= 0; });
+    generatedAt = d.generated_at || null;
+    $("statTotal").textContent = DATA.length;
+    rerenderAll();
+  })
+  .catch(() => { $("grid").innerHTML = `<p class="status">${esc(t("error"))}</p>`; });
+
+/* Auto-height: tell the Squarespace page that embeds this board how tall it is */
+if (window.parent !== window){
+  const post = () => window.parent.postMessage({bridgeBoardHeight: document.documentElement.scrollHeight}, "*");
+  window.addEventListener("load", post);
+  window.addEventListener("resize", post);
+  if (window.ResizeObserver) new ResizeObserver(post).observe(document.body);
+}
+})();
+</script>
+</body>
+</html>
