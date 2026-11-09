@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-11-02T17:48:09.039831+00:00",
+  "generated_at": "2026-11-09T18:14:09.148852+00:00",
   "count": 20,
   "scholarships": [
     {
-      "name": "Regeneron Science Talent Search",
-      "sponsor": "Society for Science (sponsored by Regeneron)",
-      "amount": null,
-      "deadline": "2026-11-05",
+      "name": "Cooke College Scholarship Program",
+      "sponsor": "Jack Kent Cooke Foundation",
+      "amount": 55000,
+      "deadline": "2026-11-11",
       "awards": null,
       "levels": [
         "Undergraduate"
       ],
       "tags": [
-        "Open to all",
-        "STEM"
+        "Need-based",
+        "Merit"
       ],
-      "apply_url": "https://www.societyforscience.org/regeneron-sts/",
-      "eligibility": "High school students who complete an original science, math, or engineering research project and enter the national competition.",
-      "confidence": 0.8,
+      "apply_url": "https://www.jkcf.org/our-scholarships/college-scholarship-program/",
+      "eligibility": "High-achieving high school seniors with financial need who plan to attend and graduate from a top four-year college or university.",
+      "confidence": 0.95,
       "looks_legit": true,
-      "source_url": "https://www.societyforscience.org/regeneron-sts/",
+      "source_url": "https://www.jkcf.org/our-scholarships/college-scholarship-program/",
       "source_type": "Website",
       "trusted": true,
       "high_school": true,
@@ -27,7 +27,14 @@
       "area": [],
       "who": [],
       "school_area": {},
-      "local": true
+      "local": true,
+      "summary_en": "High school seniors with strong grades and financial need can apply for up to $55,000 a year to attend a top four-year college. Apply by November 11, 2026.",
+      "summary_es": "Estudiantes de último año de secundaria con buen rendimiento y necesidad económica pueden solicitar hasta $55,000 al año para estudiar en una de las mejores universidades de cuatro años. La fecha límite es el 11 de noviembre de 2026.",
+      "requirements": [
+        "financial-need"
+      ],
+      "residency": "Nationwide",
+      "verified_on": "2026-10-26"
     },
     {
       "name": "Cameron Impact Scholarship",
@@ -39,11 +46,11 @@
         "Undergraduate"
       ],
       "tags": [
-        "Merit",
-        "Open to all"
+        "Open to all",
+        "Merit"
       ],
       "apply_url": "https://www.bryancameroneducationfoundation.org/scholarship",
-      "eligibility": "High school Class of 2028 applicants who are US citizens, have a minimum 3.7 unweighted GPA, and plan to enroll full-time at an accredited four-year US college.",
+      "eligibility": "High school Class of 2028 applicants with a minimum 3.7 unweighted GPA, U.S. citizenship, demonstrated leadership and community service, and a plan to enroll full-time at an accredited four-year U.S. college.",
       "confidence": 0.9,
       "looks_legit": true,
       "source_url": "https://www.bryancameroneducationfoundation.org/scholarship",
@@ -67,6 +74,67 @@
       "verified_on": "2026-10-26"
     },
     {
+      "name": "NSBE Fulfilling the Legacy Scholarship",
+      "sponsor": "National Society of Black Engineers (NSBE)",
+      "amount": 500,
+      "deadline": null,
+      "awards": null,
+      "levels": [
+        "Undergraduate",
+        "Graduate"
+      ],
+      "tags": [
+        "Open to all",
+        "STEM",
+        "Merit"
+      ],
+      "apply_url": "https://www.nsbe.org/scholarships/",
+      "eligibility": "Requires a paid NSBE membership, a STEM major, and a minimum 3.0 GPA; open to U.S. citizens, permanent residents, and non-citizens.",
+      "confidence": 0.8,
+      "looks_legit": true,
+      "source_url": "https://www.nsbe.org/scholarships/",
+      "source_type": "Website",
+      "trusted": true,
+      "high_school": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Members only"
+      ],
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "NSBE Academic Improvement Scholarship",
+      "sponsor": "National Society of Black Engineers (NSBE)",
+      "amount": 1000,
+      "deadline": null,
+      "awards": null,
+      "levels": [
+        "Undergraduate"
+      ],
+      "tags": [
+        "Open to all",
+        "STEM",
+        "Merit"
+      ],
+      "apply_url": "https://www.nsbe.org/scholarships/",
+      "eligibility": "Requires a paid NSBE membership, a STEM major, and a minimum 2.0 GPA; open to high school seniors and undergraduates.",
+      "confidence": 0.8,
+      "looks_legit": true,
+      "source_url": "https://www.nsbe.org/scholarships/",
+      "source_type": "Website",
+      "trusted": true,
+      "high_school": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Members only"
+      ],
+      "school_area": {},
+      "local": true
+    },
+    {
       "name": "Grad Student Conference Travel Grant",
       "sponsor": "National Society of Black Engineers (NSBE)",
       "amount": 500,
@@ -76,123 +144,12 @@
         "Graduate"
       ],
       "tags": [
-        "STEM"
+        "Open to all",
+        "STEM",
+        "Merit"
       ],
       "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "Graduate students in STEM majors who are paid NSBE members with at least a 2.5 GPA and plan to attend the NSBE Annual Convention GSC mini conference.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://www.nsbe.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "schools": [],
-      "area": [],
-      "who": [
-        "Members only"
-      ],
-      "high_school": false,
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "Chevron Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 5000,
-      "deadline": null,
-      "awards": 18,
-      "levels": [
-        "Undergraduate"
-      ],
-      "tags": [
-        "STEM"
-      ],
-      "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "High school seniors and first- through third-year undergraduates in engineering or computer science with at least a 3.0 GPA who are U.S. citizens or permanent residents and paid NSBE members.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://www.nsbe.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "high_school": true,
-      "schools": [],
-      "area": [],
-      "who": [
-        "Members only"
-      ],
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "Leroy Callendar NSBE Jr. Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 500,
-      "deadline": null,
-      "awards": null,
-      "levels": [
-        "Undergraduate"
-      ],
-      "tags": [
-        "STEM"
-      ],
-      "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "High school seniors in STEM fields with at least a 3.0 GPA who are paid NSBE members.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://www.nsbe.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "high_school": true,
-      "schools": [],
-      "area": [],
-      "who": [
-        "Members only"
-      ],
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "Honeywell Aerospace Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 5000,
-      "deadline": null,
-      "awards": 13,
-      "levels": [
-        "Undergraduate",
-        "Graduate"
-      ],
-      "tags": [
-        "STEM"
-      ],
-      "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "Undergraduate and graduate students in aerospace, computer, electrical, or related engineering fields with at least a 3.0 GPA who are U.S. citizens or permanent residents and paid NSBE members.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://www.nsbe.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "schools": [],
-      "area": [],
-      "who": [
-        "Members only"
-      ],
-      "high_school": false,
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "Graduate Student Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 1000,
-      "deadline": null,
-      "awards": null,
-      "levels": [
-        "Graduate"
-      ],
-      "tags": [
-        "STEM"
-      ],
-      "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "Graduate students in any STEM major with at least a 2.5 GPA who are paid NSBE members.",
+      "eligibility": "For graduate students planning to attend the NSBE Annual Convention GSC mini conference; requires paid NSBE membership and a 2.5 GPA.",
       "confidence": 0.8,
       "looks_legit": true,
       "source_url": "https://www.nsbe.org/scholarships/",
@@ -218,10 +175,42 @@
         "Graduate"
       ],
       "tags": [
-        "STEM"
+        "Open to all",
+        "STEM",
+        "Merit"
       ],
       "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "Junior, senior, and graduate NSBE members with at least a 3.0 GPA who are studying a STEM program abroad.",
+      "eligibility": "Requires paid NSBE membership, a 3.0 GPA, and a STEM program abroad; open to juniors, seniors, and graduate students.",
+      "confidence": 0.8,
+      "looks_legit": true,
+      "source_url": "https://www.nsbe.org/scholarships/",
+      "source_type": "Website",
+      "trusted": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Members only"
+      ],
+      "high_school": false,
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "Cargill Scholarship",
+      "sponsor": "Cargill via NSBE",
+      "amount": 5000,
+      "deadline": null,
+      "awards": 15,
+      "levels": [
+        "Undergraduate"
+      ],
+      "tags": [
+        "Open to all",
+        "STEM",
+        "Merit"
+      ],
+      "apply_url": "https://www.nsbe.org/scholarships/",
+      "eligibility": "Requires paid NSBE membership, an engineering or computer science major, a 2.7 GPA, and U.S. citizenship or permanent residency; Regions 4 and 5.",
       "confidence": 0.8,
       "looks_legit": true,
       "source_url": "https://www.nsbe.org/scholarships/",
@@ -246,151 +235,12 @@
         "Undergraduate"
       ],
       "tags": [
-        "STEM"
+        "Open to all",
+        "STEM",
+        "Merit"
       ],
       "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "High school seniors in STEM fields with at least a 3.0 GPA who are paid NSBE members.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://www.nsbe.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "high_school": true,
-      "schools": [],
-      "area": [],
-      "who": [
-        "Members only"
-      ],
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "Intel Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 5000,
-      "deadline": null,
-      "awards": 19,
-      "levels": [
-        "Undergraduate"
-      ],
-      "tags": [
-        "STEM"
-      ],
-      "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "First- through third-year undergraduates in engineering, computer science, physics, chemistry, or math with at least a 3.0 GPA who are paid NSBE members.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://www.nsbe.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "schools": [],
-      "area": [],
-      "who": [
-        "Members only"
-      ],
-      "high_school": false,
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "Cargill Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 5000,
-      "deadline": null,
-      "awards": 15,
-      "levels": [
-        "Undergraduate"
-      ],
-      "tags": [
-        "STEM"
-      ],
-      "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "Undergraduates in Regions 4 and 5 in engineering or computer science with at least a 2.7 GPA who are U.S. citizens or permanent residents and paid NSBE members.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://www.nsbe.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "schools": [],
-      "area": [],
-      "who": [
-        "Members only"
-      ],
-      "high_school": false,
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "NSBE Fulfilling the Legacy Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 500,
-      "deadline": null,
-      "awards": null,
-      "levels": [
-        "Undergraduate",
-        "Graduate"
-      ],
-      "tags": [
-        "STEM"
-      ],
-      "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "High school seniors, undergraduates, and graduate students in STEM fields with at least a 3.0 GPA who are paid NSBE members.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://www.nsbe.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "high_school": true,
-      "schools": [],
-      "area": [],
-      "who": [
-        "Members only"
-      ],
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "NSBE Academic Improvement Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 1000,
-      "deadline": null,
-      "awards": null,
-      "levels": [
-        "Undergraduate"
-      ],
-      "tags": [
-        "STEM"
-      ],
-      "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "High school seniors and undergraduates in STEM fields with at least a 2.0 GPA who are paid NSBE members.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://www.nsbe.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "high_school": true,
-      "schools": [],
-      "area": [],
-      "who": [
-        "Members only"
-      ],
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "NSBE Jr. Golden Torch Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 1000,
-      "deadline": null,
-      "awards": null,
-      "levels": [
-        "Undergraduate"
-      ],
-      "tags": [
-        "STEM"
-      ],
-      "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "High school seniors in STEM fields with at least a 3.5 GPA who are paid NSBE members.",
+      "eligibility": "For high school seniors who are paid NSBE members with a minimum 3.0 GPA and a STEM field of interest.",
       "confidence": 0.8,
       "looks_legit": true,
       "source_url": "https://www.nsbe.org/scholarships/",
@@ -407,7 +257,7 @@
     },
     {
       "name": "Deloitte Foundation Scholarship",
-      "sponsor": "National Society of Black Engineers (NSBE)",
+      "sponsor": "Deloitte Foundation via NSBE",
       "amount": 17500,
       "deadline": null,
       "awards": 36,
@@ -415,10 +265,103 @@
         "Undergraduate"
       ],
       "tags": [
-        "STEM"
+        "Open to all",
+        "STEM",
+        "Merit"
       ],
       "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "First- through third-year undergraduates in mechanical engineering, computer science, or related fields with at least a 3.0 GPA who are U.S. citizens or permanent residents and paid NSBE members; renewable for up to 4 semesters ($4,375 per semester).",
+      "eligibility": "Requires paid NSBE membership, a 3.0 GPA, and a computing or engineering major; U.S. citizens or permanent residents, renewable for up to 4 semesters.",
+      "confidence": 0.8,
+      "looks_legit": true,
+      "source_url": "https://www.nsbe.org/scholarships/",
+      "source_type": "Website",
+      "trusted": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Members only"
+      ],
+      "high_school": false,
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "Intel Scholarship",
+      "sponsor": "Intel via NSBE",
+      "amount": 5000,
+      "deadline": null,
+      "awards": 19,
+      "levels": [
+        "Undergraduate"
+      ],
+      "tags": [
+        "Open to all",
+        "STEM",
+        "Merit"
+      ],
+      "apply_url": "https://www.nsbe.org/scholarships/",
+      "eligibility": "Requires paid NSBE membership, a 3.0 GPA, and a STEM major; freshmen through juniors.",
+      "confidence": 0.8,
+      "looks_legit": true,
+      "source_url": "https://www.nsbe.org/scholarships/",
+      "source_type": "Website",
+      "trusted": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Members only"
+      ],
+      "high_school": false,
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "Honeywell Aerospace Scholarship",
+      "sponsor": "Honeywell via NSBE",
+      "amount": 5000,
+      "deadline": null,
+      "awards": 13,
+      "levels": [
+        "Undergraduate",
+        "Graduate"
+      ],
+      "tags": [
+        "Open to all",
+        "STEM",
+        "Merit"
+      ],
+      "apply_url": "https://www.nsbe.org/scholarships/",
+      "eligibility": "Requires paid NSBE membership, a 3.0 GPA, and an aerospace, computing, or engineering major; U.S. citizens or permanent residents.",
+      "confidence": 0.8,
+      "looks_legit": true,
+      "source_url": "https://www.nsbe.org/scholarships/",
+      "source_type": "Website",
+      "trusted": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Members only"
+      ],
+      "high_school": false,
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "Honeywell Technologies Scholarship",
+      "sponsor": "Honeywell via NSBE",
+      "amount": 5000,
+      "deadline": null,
+      "awards": 15,
+      "levels": [
+        "Undergraduate"
+      ],
+      "tags": [
+        "Open to all",
+        "STEM",
+        "Merit"
+      ],
+      "apply_url": "https://www.nsbe.org/scholarships/",
+      "eligibility": "Requires paid NSBE membership, a 3.0 GPA, and a STEM major; sophomores through seniors who are U.S. citizens or permanent residents.",
       "confidence": 0.8,
       "looks_legit": true,
       "source_url": "https://www.nsbe.org/scholarships/",
@@ -444,10 +387,12 @@
         "Graduate"
       ],
       "tags": [
-        "STEM"
+        "Open to all",
+        "STEM",
+        "Merit"
       ],
       "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "Undergraduate and graduate students in any STEM major with at least a 2.5 GPA who are paid NSBE members; awards range from $1,000 to $1,500.",
+      "eligibility": "Requires paid NSBE membership, a STEM major, and a 2.5 GPA; award range $1,000-$1,500.",
       "confidence": 0.8,
       "looks_legit": true,
       "source_url": "https://www.nsbe.org/scholarships/",
@@ -463,19 +408,51 @@
       "local": true
     },
     {
-      "name": "Honeywell Technologies Scholarship",
+      "name": "Leroy Callendar NSBE Jr. Scholarship",
       "sponsor": "National Society of Black Engineers (NSBE)",
-      "amount": 5000,
+      "amount": 500,
       "deadline": null,
-      "awards": 15,
+      "awards": null,
       "levels": [
         "Undergraduate"
       ],
       "tags": [
-        "STEM"
+        "Open to all",
+        "STEM",
+        "Merit"
       ],
       "apply_url": "https://www.nsbe.org/scholarships/",
-      "eligibility": "Second- through fourth-year undergraduates in engineering, computer science, or technology fields with at least a 3.0 GPA who are U.S. citizens or permanent residents and paid NSBE members.",
+      "eligibility": "For high school seniors who are paid NSBE members with a minimum 3.0 GPA and a STEM field of interest.",
+      "confidence": 0.8,
+      "looks_legit": true,
+      "source_url": "https://www.nsbe.org/scholarships/",
+      "source_type": "Website",
+      "trusted": true,
+      "high_school": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Members only"
+      ],
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "Graduate Student Scholarship",
+      "sponsor": "National Society of Black Engineers (NSBE)",
+      "amount": 1000,
+      "deadline": null,
+      "awards": null,
+      "levels": [
+        "Graduate"
+      ],
+      "tags": [
+        "Open to all",
+        "STEM",
+        "Merit"
+      ],
+      "apply_url": "https://www.nsbe.org/scholarships/",
+      "eligibility": "Requires paid NSBE membership, a STEM field of study, and a 2.5 GPA.",
       "confidence": 0.8,
       "looks_legit": true,
       "source_url": "https://www.nsbe.org/scholarships/",
@@ -484,6 +461,125 @@
       "schools": [],
       "area": [],
       "who": [
+        "Members only"
+      ],
+      "high_school": false,
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "NSBE Jr. Golden Torch Scholarship",
+      "sponsor": "National Society of Black Engineers (NSBE)",
+      "amount": 1000,
+      "deadline": null,
+      "awards": null,
+      "levels": [
+        "Undergraduate"
+      ],
+      "tags": [
+        "Open to all",
+        "STEM",
+        "Merit"
+      ],
+      "apply_url": "https://www.nsbe.org/scholarships/",
+      "eligibility": "For high school seniors who are paid NSBE members with a minimum 3.5 GPA and a STEM field of interest.",
+      "confidence": 0.8,
+      "looks_legit": true,
+      "source_url": "https://www.nsbe.org/scholarships/",
+      "source_type": "Website",
+      "trusted": true,
+      "high_school": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Members only"
+      ],
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "Chevron Scholarship",
+      "sponsor": "Chevron via NSBE",
+      "amount": 5000,
+      "deadline": null,
+      "awards": 18,
+      "levels": [
+        "Undergraduate"
+      ],
+      "tags": [
+        "Open to all",
+        "STEM",
+        "Merit"
+      ],
+      "apply_url": "https://www.nsbe.org/scholarships/",
+      "eligibility": "Requires paid NSBE membership, a 3.0 GPA, and a STEM major; U.S. citizens or permanent residents in Regions 3, 5, and 6.",
+      "confidence": 0.8,
+      "looks_legit": true,
+      "source_url": "https://www.nsbe.org/scholarships/",
+      "source_type": "Website",
+      "trusted": true,
+      "high_school": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Members only"
+      ],
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "Coca-Cola Community College Academic Team",
+      "sponsor": "Phi Theta Kappa",
+      "amount": 1500,
+      "deadline": null,
+      "awards": 150,
+      "levels": [
+        "Undergraduate"
+      ],
+      "tags": [
+        "Open to all",
+        "Merit"
+      ],
+      "apply_url": "https://www.ptk.org/scholarships/coca-cola-academic-team-scholarship/",
+      "eligibility": "Community college students who are Phi Theta Kappa members and selected to the Academic Team; awards are $1,500 (Gold), $1,250 (Silver), or $1,000 (Bronze).",
+      "confidence": 0.6,
+      "looks_legit": true,
+      "source_url": "https://www.coca-colascholarsfoundation.org/apply/",
+      "source_type": "Website",
+      "trusted": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Community college",
+        "Members only"
+      ],
+      "high_school": false,
+      "school_area": {},
+      "local": true
+    },
+    {
+      "name": "Coca-Cola Leaders of Promise",
+      "sponsor": "Phi Theta Kappa",
+      "amount": 1000,
+      "deadline": null,
+      "awards": 200,
+      "levels": [
+        "Undergraduate"
+      ],
+      "tags": [
+        "Open to all"
+      ],
+      "apply_url": "https://www.ptk.org/scholarships/coca-cola-leaders-of-promise-scholarship/",
+      "eligibility": "Phi Theta Kappa members enrolled in community college may apply for one of 200 scholarships of $1,000.",
+      "confidence": 0.6,
+      "looks_legit": true,
+      "source_url": "https://www.coca-colascholarsfoundation.org/apply/",
+      "source_type": "Website",
+      "trusted": true,
+      "schools": [],
+      "area": [],
+      "who": [
+        "Community college",
         "Members only"
       ],
       "high_school": false,
@@ -524,60 +620,6 @@
       ],
       "residency": "Nationwide",
       "verified_on": "2026-10-26"
-    },
-    {
-      "name": "Folds of Honor Higher Education Scholarship",
-      "sponsor": "Folds of Honor Foundation",
-      "amount": null,
-      "deadline": null,
-      "awards": null,
-      "levels": [
-        "Undergraduate"
-      ],
-      "tags": [
-        "Veterans/Military",
-        "Need-based"
-      ],
-      "apply_url": "https://foldsofhonor.org/scholarships/",
-      "eligibility": "For families who have sacrificed for the country; awards are based on unmet need and require a 2.0 or higher term GPA. The application window is annual, February 1 to March 31, and is currently closed.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://foldsofhonor.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "schools": [],
-      "area": [],
-      "who": [],
-      "high_school": false,
-      "school_area": {},
-      "local": true
-    },
-    {
-      "name": "Folds of Honor Children's Fund Scholarship",
-      "sponsor": "Folds of Honor Foundation",
-      "amount": 5000,
-      "deadline": null,
-      "awards": null,
-      "levels": [
-        "Undergraduate"
-      ],
-      "tags": [
-        "Veterans/Military",
-        "Need-based"
-      ],
-      "apply_url": "https://foldsofhonor.org/scholarships/",
-      "eligibility": "For K-12 students in families who have sacrificed for the country, covering private school tuition or tutoring; the application window is annual, February 1 to March 31, and is currently closed.",
-      "confidence": 0.8,
-      "looks_legit": true,
-      "source_url": "https://foldsofhonor.org/scholarships/",
-      "source_type": "Website",
-      "trusted": true,
-      "high_school": true,
-      "schools": [],
-      "area": [],
-      "who": [],
-      "school_area": {},
-      "local": true
     }
   ]
 }
